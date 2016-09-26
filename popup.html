@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    height:200px;
+    width:260px;
+  }
+  #status {
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 400px;
+  }
+  .button {
+    background-color: red;
+    border-radius: 4px;
+    padding: 4px;
+    outline: none;
+
+  }
+  h2{
+    text-align: center;
+  }
+  .VinResult{
+    border: none;
+  }
+  #vins li:nth-of-type(1){
+    display: none;
+  }
+
+  </style>
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="jquery.js"></script>
+  <script src="popup.js"> </script>
+
+</head>
+<body id="RandomVin_Body">
+
+  <div class="panel panel-default" id="vins">
+    <div class="panel-heading clearfix">
+      <a class="btn btn-primary btn-xs pull-right" id="getVin">New VIN <span class="glyphicon glyphicon-refresh"></span></a>
+      <a class="btn btn-danger btn-xs pull-right" style="margin-right:2px;" id="refresh">clear <span class="glyphicon glyphicon-remove"></span></a>
+      <h3 class="panel-title">Vins</h3>
+    </div>
+    <ul id="vins" class="panel-body list-group">
+
+      <li class="list-group-item" style="padding: 0;">
+        <div class="input-group">
+          <input type="text" placeholder="VIN" class="form-control vin-field" />
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-copy"></span>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+</body>
+</html>
